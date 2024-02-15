@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Heroes View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HeroesViewController" id="Y6W-OH-hqX" customClass="HeroesViewController" customModule="Practica_IOS_Avanzado" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whp-ZF-4K1">
+                                <rect key="frame" x="0.0" y="736" width="393" height="82"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="radarDragonBall" translatesAutoresizingMaskIntoConstraints="NO" id="37E-nd-WUl">
+                                        <rect key="frame" x="0.0" y="-11" width="393" height="127"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEr-uW-TSF">
+                                        <rect key="frame" x="-4" y="32" width="399.66666666666669" height="56"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Mapa con todos los heroes¡¡">
+                                            <fontDescription key="titleFontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="32"/>
+                                            <directionalEdgeInsets key="contentInsets" top="6" leading="21" bottom="10" trailing="9"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="allHeroesButom:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="E8H-4y-HTv"/>
+                                            <segue destination="2Ff-Xs-ed0" kind="show" identifier="HEROESALLMAP_SEGUE" id="3Rr-cV-oHw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="vEr-uW-TSF" firstAttribute="leading" secondItem="whp-ZF-4K1" secondAttribute="leading" constant="-4" id="5oE-7j-WqO"/>
+                                    <constraint firstItem="vEr-uW-TSF" firstAttribute="top" secondItem="whp-ZF-4K1" secondAttribute="top" constant="32" id="DPp-P2-3sG"/>
+                                    <constraint firstAttribute="bottom" secondItem="vEr-uW-TSF" secondAttribute="bottom" constant="-6" id="Wey-VW-xQs"/>
+                                    <constraint firstAttribute="trailing" secondItem="vEr-uW-TSF" secondAttribute="trailing" constant="-2.6699999999999999" id="fUe-cE-IUM"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HI6-CK-G27">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="739"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" id="dmW-O8-Q3q">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="7KW-Nd-klj">
+                                        <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                        <color key="color" systemColor="viewFlipsideBackgroundColor"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="7KW-Nd-klj" firstAttribute="centerX" secondItem="dmW-O8-Q3q" secondAttribute="centerX" id="2GT-3Q-ZzP"/>
+                                    <constraint firstItem="7KW-Nd-klj" firstAttribute="centerY" secondItem="dmW-O8-Q3q" secondAttribute="centerY" id="RIQ-ZV-xxs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="whp-ZF-4K1" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="736" id="SU6-NE-1IR"/>
+                            <constraint firstItem="HI6-CK-G27" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="U3F-AM-1Uf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HI6-CK-G27" secondAttribute="trailing" id="U3l-9T-Yw0"/>
+                            <constraint firstItem="whp-ZF-4K1" firstAttribute="trailing" secondItem="HI6-CK-G27" secondAttribute="trailing" id="U4g-pF-XNH"/>
+                            <constraint firstItem="whp-ZF-4K1" firstAttribute="leading" secondItem="HI6-CK-G27" secondAttribute="leading" id="Wam-Hc-3Ew"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="HI6-CK-G27" secondAttribute="bottom" constant="79" id="kh5-zB-76c"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="whp-ZF-4K1" secondAttribute="bottom" id="vd9-Zq-Rzr"/>
+                            <constraint firstItem="HI6-CK-G27" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-59" id="w5d-Hh-fff"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingView" destination="dmW-O8-Q3q" id="fa3-vE-L74"/>
+                        <outlet property="tableView" destination="HI6-CK-G27" id="7Hv-qO-Nnq"/>
+                        <segue destination="XeI-cC-70i" kind="show" identifier="DETAIL_SEGUE" id="z4T-jY-YKa"/>
+                        <segue destination="sUf-nA-fK2" kind="show" identifier="LOGIN_SEGUE" id="pkR-dL-guf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.824427480916029" y="-27.464788732394368"/>
+        </scene>
+        <!--HeroesAllMap-->
+        <scene sceneID="DdU-C5-5Sg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HeroesAllMap" id="2Ff-Xs-ed0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mat-AV-taR"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xw3-wo-i7g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="37"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="yqz-8R-55z">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="sUf-nA-fK2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uqg-oF-eec"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fOo-q7-y9G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="-157"/>
+        </scene>
+        <!--HeroesDetail-->
+        <scene sceneID="ryZ-X4-zaN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HeroesDetail" id="XeI-cC-70i" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="71t-I7-NDh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQT-lN-Hf2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="999" y="-66"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="radarDragonBall" width="500" height="500"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
